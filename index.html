@@ -82,14 +82,14 @@ nav ul a:hover { color: var(--green); }
 .ba-section { padding: 120px 80px; background: var(--green-pale); }
 .ba-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 64px; }
 .ba-card { background: white; overflow: hidden; }
-.ba-images { display: grid; grid-template-columns: 1fr 1fr; height: 260px; position: relative; }
+.ba-images { display: flex; flex-direction: column; position: relative; }
 .ba-before, .ba-after { overflow: hidden; position: relative; }
-.ba-before img, .ba-after img { width: 100%; height: 100%; object-fit: cover; }
-.ba-tag { position: absolute; bottom: 10px; left: 10px; font-size: 9px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 4px 8px; }
+.ba-before img, .ba-after img { width: 100%; display: block; }
+.ba-tag { position: absolute; top: 12px; left: 12px; font-size: 9px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 4px 8px; }
 .ba-before .ba-tag { background: rgba(0,0,0,0.55); color: rgba(255,255,255,0.75); }
 .ba-after .ba-tag { background: var(--green); color: var(--ivory); }
-.ba-divider { position: absolute; left: 50%; top: 0; bottom: 0; width: 1.5px; background: white; z-index: 2; }
-.ba-arrow { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 28px; height: 28px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 3; font-size: 12px; color: var(--green); box-shadow: 0 2px 10px rgba(0,0,0,0.15); font-weight: 700; }
+.ba-divider { height: 3px; background: white; z-index: 2; }
+.ba-arrow { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 36px; height: 36px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 3; font-size: 18px; color: var(--green); box-shadow: 0 2px 12px rgba(0,0,0,0.2); font-weight: 700; }
 .ba-info { padding: 20px 24px; border-top: 1px solid var(--ivory-dark); }
 .ba-type { font-size: 10px; color: var(--green-light); font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 6px; }
 .ba-desc { font-size: 13px; color: var(--gray); line-height: 1.6; }
@@ -294,7 +294,7 @@ footer { background: #0d1912; padding: 36px 80px; display: flex; justify-content
   <div class="ba-grid">
     <div class="ba-card">
       <div class="ba-images">
-        <div class="ba-before"><img src="BF1_RESULT.WEBP" alt="before"/><div class="ba-tag">Before</div></div>
+        <div class="ba-before"><img src="Be1_RESULT.WEBP" alt="before"/><div class="ba-tag">Before</div></div>
         <div class="ba-after"><img src="AF1_RESULT.WEBP" alt="after"/><div class="ba-tag">After</div></div>
         <div class="ba-divider"></div><div class="ba-arrow">→</div>
       </div>
@@ -355,6 +355,38 @@ footer { background: #0d1912; padding: 36px 80px; display: flex; justify-content
         <div class="ba-divider"></div><div class="ba-arrow">→</div>
       </div>
       <div class="ba-info"><div class="ba-type">Standard · 변형 연출컷</div><div class="ba-desc">같은 음식, 다른 무드로도 가능합니다</div></div>
+    </div>
+    <div class="ba-card">
+      <div class="ba-images">
+        <div class="ba-before"><img src="qs2/before_pho.jpeg" alt="before"/><div class="ba-tag">Before</div></div>
+        <div class="ba-after"><img src="qs2/after_pho.jpg" alt="after"/><div class="ba-tag">After</div></div>
+        <div class="ba-divider"></div><div class="ba-arrow">→</div>
+      </div>
+      <div class="ba-info"><div class="ba-type">Standard · 무드 연출컷</div><div class="ba-desc">쌀국수 핸드폰 스냅 → 다크무드 연출컷</div></div>
+    </div>
+    <div class="ba-card">
+      <div class="ba-images">
+        <div class="ba-before"><img src="qs2/before_pasta.jpeg" alt="before"/><div class="ba-tag">Before</div></div>
+        <div class="ba-after"><img src="qs2/after_pasta.jpg" alt="after"/><div class="ba-tag">After</div></div>
+        <div class="ba-divider"></div><div class="ba-arrow">→</div>
+      </div>
+      <div class="ba-info"><div class="ba-type">Standard · 무드 연출컷</div><div class="ba-desc">파스타 스냅 → 셰프 무드 연출컷</div></div>
+    </div>
+    <div class="ba-card">
+      <div class="ba-images">
+        <div class="ba-before"><img src="qs2/before_jokbal.jpeg" alt="before"/><div class="ba-tag">Before</div></div>
+        <div class="ba-after"><img src="qs2/after_jokbal.jpg" alt="after"/><div class="ba-tag">After</div></div>
+        <div class="ba-divider"></div><div class="ba-arrow">→</div>
+      </div>
+      <div class="ba-info"><div class="ba-type">Premium · 연출컷</div><div class="ba-desc">족발 스냅 → 전문 연출 컷</div></div>
+    </div>
+    <div class="ba-card">
+      <div class="ba-images">
+        <div class="ba-before"><img src="qs2/before_sashimi.jpeg" alt="before"/><div class="ba-tag">Before</div></div>
+        <div class="ba-after"><img src="qs2/after_sashimi.jpg" alt="after"/><div class="ba-tag">After</div></div>
+        <div class="ba-divider"></div><div class="ba-arrow">→</div>
+      </div>
+      <div class="ba-info"><div class="ba-type">Basic · 단품 심플컷</div><div class="ba-desc">회 모둠 스냅 → 깔끔한 단품 컷</div></div>
     </div>
   </div>
 </section>
@@ -570,4 +602,4 @@ footer { background: #0d1912; padding: 36px 80px; display: flex; justify-content
     emailjs.send('service_2c6yk8j', 'template_wvshxbg', params)
       .then(() => {
         document.getElementById('contactForm').style.display = 'none';
-        document. 
+        document.
