@@ -29,6 +29,9 @@ nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 0 60px; heigh
 nav ul { display: flex; gap: 40px; list-style: none; }
 nav ul a { text-decoration: none; color: var(--gray); font-size: 13px; font-weight: 400; letter-spacing: 0.05em; transition: color 0.2s; }
 nav ul a:hover { color: var(--green); }
+.nav-right { display: flex; align-items: center; gap: 16px; }
+.nav-insta { display: inline-flex; align-items: center; gap: 6px; color: var(--gray); font-size: 12px; text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s; }
+.nav-insta:hover { color: var(--green); }
 .nav-cta { background: var(--green); color: var(--ivory) !important; padding: 11px 26px; font-size: 12px !important; font-weight: 700 !important; letter-spacing: 0.08em; text-decoration: none; display: inline-block; transition: background 0.2s; cursor: pointer; border: none; }
 .nav-cta:hover { background: var(--green-mid); }
 
@@ -78,8 +81,32 @@ nav ul a:hover { color: var(--green); }
 .target-item { padding: 18px 0; border-bottom: 1px solid var(--ivory-dark); font-size: 15px; color: var(--gray); display: flex; align-items: center; gap: 16px; line-height: 1.5; }
 .target-item::before { content: '✓'; color: var(--green-light); font-weight: 700; font-size: 14px; flex-shrink: 0; }
 
+/* REFUND BANNER */
+.refund-banner { background: var(--green); padding: 40px 80px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.refund-banner-left { display: flex; align-items: center; gap: 20px; }
+.refund-icon { width: 48px; height: 48px; border: 2px solid rgba(232,239,233,0.3); border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.refund-title { font-family: 'Playfair Display', serif; font-size: 22px; color: white; font-weight: 700; margin-bottom: 6px; }
+.refund-desc { font-size: 13px; color: rgba(232,239,233,0.5); line-height: 1.6; }
+.refund-process { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.refund-step { font-size: 12px; color: rgba(232,239,233,0.6); display: flex; align-items: center; gap: 8px; }
+.refund-step strong { color: white; }
+.refund-arrow { color: rgba(232,239,233,0.25); font-size: 14px; }
+
+/* VIDEO SECTION */
+.video-section { padding: 100px 80px; background: var(--green-pale); }
+.video-inner { display: grid; grid-template-columns: 1fr 400px; gap: 80px; align-items: center; }
+.video-wrap { position: relative; width: 100%; aspect-ratio: 9/16; border-radius: 4px; overflow: hidden; box-shadow: 0 24px 60px rgba(26,48,40,0.18); }
+.video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+.video-text .section-title { margin-bottom: 16px; }
+.video-text .section-desc { margin-bottom: 32px; }
+.video-points { display: flex; flex-direction: column; gap: 16px; margin-top: 32px; }
+.video-point { display: flex; align-items: flex-start; gap: 14px; padding: 16px 20px; background: white; border-left: 3px solid var(--green-light); }
+.video-point-num { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--green-pale); line-height: 1; flex-shrink: 0; font-weight: 900; }
+.video-point-text { font-size: 14px; color: var(--gray); line-height: 1.6; }
+.video-point-text strong { color: var(--green); display: block; margin-bottom: 2px; font-size: 15px; }
+
 /* BA SECTION */
-.ba-section { padding: 120px 80px; background: var(--green-pale); }
+.ba-section { padding: 120px 80px; background: var(--cream); }
 .ba-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 64px; }
 .ba-card { background: white; overflow: hidden; }
 .ba-images { display: grid; grid-template-columns: 1fr 1fr; height: 420px; position: relative; }
@@ -95,7 +122,7 @@ nav ul a:hover { color: var(--green); }
 .ba-desc { font-size: 13px; color: var(--gray); line-height: 1.6; }
 
 /* PACKAGES */
-.packages-section { padding: 120px 80px; background: var(--cream); }
+.packages-section { padding: 120px 80px; background: var(--ivory); }
 .packages-header { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-bottom: 64px; align-items: end; }
 .volume-box { background: var(--green-pale); border: 1px solid rgba(26,48,40,0.1); padding: 28px 32px; }
 .volume-box .vol-label { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green-light); margin-bottom: 16px; }
@@ -128,7 +155,7 @@ nav ul a:hover { color: var(--green); }
 .package-card.featured .pkg-cta:hover { background: rgba(255,255,255,0.12); }
 
 /* PROCESS */
-.process-section { padding: 120px 80px; background: var(--ivory); }
+.process-section { padding: 120px 80px; background: var(--green-pale); }
 .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--ivory-dark); border: 1px solid var(--ivory-dark); margin-top: 64px; }
 .process-step { padding: 52px 44px; background: var(--ivory); }
 .step-num { font-family: 'Playfair Display', serif; font-size: 80px; color: var(--green-pale); line-height: 1; margin-bottom: 28px; font-weight: 900; }
@@ -155,16 +182,11 @@ nav ul a:hover { color: var(--green); }
 .contact-info-item { display: flex; align-items: center; gap: 16px; }
 .contact-info-label { font-size: 11px; color: rgba(232,239,233,0.4); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 4px; }
 .contact-info-value { font-size: 14px; color: rgba(232,239,233,0.8); }
-
 .contact-form { background: var(--cream); padding: 48px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .form-group { margin-bottom: 20px; }
 .form-group label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--green-light); margin-bottom: 8px; }
-.form-group input, .form-group select, .form-group textarea {
-  width: 100%; padding: 14px 16px; background: white; border: 1px solid var(--ivory-dark);
-  font-size: 14px; color: var(--black); font-family: 'Noto Sans KR', sans-serif;
-  transition: border-color 0.2s; outline: none; appearance: none;
-}
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px 16px; background: white; border: 1px solid var(--ivory-dark); font-size: 14px; color: var(--black); font-family: 'Noto Sans KR', sans-serif; transition: border-color 0.2s; outline: none; appearance: none; }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--green-light); }
 .form-group textarea { resize: vertical; min-height: 120px; }
 .form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%233d6654' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; }
@@ -188,7 +210,10 @@ nav ul a:hover { color: var(--green); }
 footer { background: #0d1912; padding: 36px 80px; display: flex; justify-content: space-between; align-items: center; }
 .footer-logo { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--ivory); font-weight: 700; }
 .footer-logo span { color: var(--green-light); font-style: italic; font-weight: 400; }
+.footer-center { display: flex; align-items: center; gap: 24px; }
 .footer-email { font-size: 12px; color: rgba(232,239,233,0.35); }
+.footer-insta { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: rgba(232,239,233,0.35); text-decoration: none; transition: color 0.2s; }
+.footer-insta:hover { color: rgba(232,239,233,0.7); }
 .footer-copy { font-size: 11px; color: rgba(232,239,233,0.18); }
 
 /* ANIMATIONS */
@@ -202,6 +227,7 @@ footer { background: #0d1912; padding: 36px 80px; display: flex; justify-content
 @media (max-width: 1024px) {
   nav { padding: 0 24px; }
   nav ul { display: none; }
+  .nav-insta { display: none; }
   .hero { grid-template-columns: 1fr; }
   .hero-left { padding: 60px 28px; }
   .hero-right { height: 60vw; min-height: 300px; }
@@ -216,6 +242,10 @@ footer { background: #0d1912; padding: 36px 80px; display: flex; justify-content
   .notice-grid, .form-row { grid-template-columns: 1fr; }
   footer { padding: 32px 28px; flex-direction: column; gap: 16px; text-align: center; }
   .contact-form { padding: 32px 24px; }
+  .refund-banner { padding: 40px 28px; flex-direction: column; align-items: flex-start; }
+  .video-section { padding: 72px 28px; }
+  .video-inner { grid-template-columns: 1fr; gap: 48px; }
+  .video-wrap { max-width: 320px; margin: 0 auto; }
 }
 </style>
 </head>
@@ -229,7 +259,13 @@ footer { background: #0d1912; padding: 36px 80px; display: flex; justify-content
     <li><a href="#packages">패키지</a></li>
     <li><a href="#contact">문의</a></li>
   </ul>
-  <a class="nav-cta" href="https://smartstore.naver.com/liveinjeju/products/13355645480" target="_blank">주문하기</a>
+  <div class="nav-right">
+    <a href="https://www.instagram.com/quickshotkorea" target="_blank" class="nav-insta">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+      @quickshotkorea
+    </a>
+    <a class="nav-cta" href="https://smartstore.naver.com/liveinjeju/products/13355645480" target="_blank">주문하기</a>
+  </div>
 </nav>
 
 <section class="hero">
@@ -237,11 +273,11 @@ footer { background: #0d1912; padding: 36px 80px; display: flex; justify-content
     <div class="hero-badge">AI 메뉴 사진 제작 서비스</div>
     <h1>핸드폰 사진 한 장으로<br/>전문가급 메뉴 사진을</h1>
     <p class="hero-sub">
-      비싼 촬영 비용 쓰고도 결과물에 실망하셨나요?<br/>
+      아직도 폰 사진 그대로 메뉴판에 올리세요?<br/>
       전문가 안목 + AI로 고퀄, 합리적인 가격에 해결해드립니다.
     </p>
     <div class="hero-actions">
-      <a class="btn-primary" href="https://smartstore.naver.com/liveinjeju/products/13355645480" target="_blank" class="btn-primary">주문하기 →</a>
+      <a class="btn-primary" href="https://smartstore.naver.com/liveinjeju/products/13355645480" target="_blank">주문하기 →</a>
       <a href="#packages" class="btn-secondary">패키지 보기</a>
     </div>
   </div>
@@ -267,7 +303,9 @@ footer { background: #0d1912; padding: 36px 80px; display: flex; justify-content
   <div class="stat-item"><div class="stat-number">20<sup>년</sup></div><div class="stat-label">전문 촬영 경험 기반</div></div>
   <div class="stat-item"><div class="stat-number">0<sup>원</sup></div><div class="stat-label">별도 장비 필요 없음</div></div>
 </section>
-<img src="qs2/ai%20food%20photo.WEBP" alt="이벤트"/>
+
+<img src="qs2/ai%20food%20photo.WEBP" alt="이벤트" style="width:100%;display:block;"/>
+
 <section class="about-section" id="about">
   <div class="about-grid">
     <div>
@@ -288,8 +326,61 @@ footer { background: #0d1912; padding: 36px 80px; display: flex; justify-content
   </div>
 </section>
 
+<!-- 전액환불 배너 -->
+<div class="refund-banner">
+  <div class="refund-banner-left">
+    <div class="refund-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(232,239,233,0.6)" stroke-width="2" stroke-linecap="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <polyline points="9 12 11 14 15 10"/>
+      </svg>
+    </div>
+    <div>
+      <div class="refund-title">마음에 안 드시면 전액 환불</div>
+      <div class="refund-desc">AI 혼자 돌리면 10장 중 1장만 건집니다. 20년 경력이 결과물을 직접 검수합니다.</div>
+    </div>
+  </div>
+  <div class="refund-process">
+    <div class="refund-step"><strong>결제</strong></div>
+    <div class="refund-arrow">→</div>
+    <div class="refund-step"><strong>워터마크 샘플</strong> 발송</div>
+    <div class="refund-arrow">→</div>
+    <div class="refund-step"><strong>확인 후</strong> 구매확정</div>
+    <div class="refund-arrow">→</div>
+    <div class="refund-step"><strong>원본</strong> 수령</div>
+  </div>
+</div>
+
+<!-- 유튜브 쇼츠 영상 섹션 -->
+<section class="video-section">
+  <div class="video-inner">
+    <div class="video-text">
+      <div class="section-label">실제 변환 영상</div>
+      <h2 class="section-title">말보다<br/>영상으로<br/>확인하세요</h2>
+      <p class="section-desc">같은 음식, 완전히 다른 사진입니다. 핸드폰으로 찍은 원본이 어떻게 바뀌는지 직접 보세요.</p>
+      <div class="video-points">
+        <div class="video-point">
+          <div class="video-point-num">01</div>
+          <div class="video-point-text"><strong>사진만 보내면 끝</strong>별도 장비, 조명, 세팅 필요 없습니다</div>
+        </div>
+        <div class="video-point">
+          <div class="video-point-num">02</div>
+          <div class="video-point-text"><strong>전문가 안목으로 선별</strong>AI가 만든 결과물 중 가장 좋은 것만 납품합니다</div>
+        </div>
+        <div class="video-point">
+          <div class="video-point-num">03</div>
+          <div class="video-point-text"><strong>15,000원부터 시작</strong>마음에 안 드시면 전액 환불</div>
+        </div>
+      </div>
+    </div>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/EoRj6YPhcOc" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+    </div>
+  </div>
+</section>
+
 <section class="ba-section" id="examples">
-  <div class="section-label">Before & After</div>
+  <div class="section-label">Before &amp; After</div>
   <h2 class="section-title">결과물로<br/>직접 확인하세요</h2>
   <div class="ba-grid">
     <div class="ba-card">
@@ -469,7 +560,7 @@ footer { background: #0d1912; padding: 36px 80px; display: flex; justify-content
     <div class="process-step">
       <div class="step-num">03</div>
       <div class="step-title">결과물 수령</div>
-      <div class="step-desc">전문가 안목으로 검수한 완성 이미지를 납품해드립니다.</div>
+      <div class="step-desc">전문가 안목으로 검수한 완성 이미지를 납품해드립니다. 마음에 안 드시면 전액 환불.</div>
       <div class="step-tip">장축 2,500px · 업스케일 장당 +10,000원</div>
     </div>
   </div>
@@ -481,7 +572,7 @@ footer { background: #0d1912; padding: 36px 80px; display: flex; justify-content
   <div class="faq-inner">
     <div class="faq-side">
       <p>추가로 궁금하신 사항은 아래 문의 폼으로 연락주세요. 빠르게 답변드립니다.</p>
-      <button class="btn-primary" style="font-size:12px;padding:14px 28px;" href="https://smartstore.naver.com/liveinjeju/products/13355645480" target="_blank" class="btn-primary" style="font-size:12px;padding:14px 28px;">주문하기 →</a>
+      <a class="btn-primary" style="font-size:12px;padding:14px 28px;" href="https://smartstore.naver.com/liveinjeju/products/13355645480" target="_blank">주문하기 →</a>
     </div>
     <div class="faq-list">
       <div class="faq-item"><div class="faq-q">AI 티가 나지 않나요? <span class="faq-toggle">+</span></div><div class="faq-a">전문가 안목으로 결과물을 직접 검수하여 최대한 자연스럽게 납품해드립니다. 다만 AI 특성상 100% 실사와 동일하지 않을 수 있으며, 이 점 미리 참고 부탁드립니다.</div></div>
@@ -494,7 +585,6 @@ footer { background: #0d1912; padding: 36px 80px; display: flex; justify-content
   </div>
 </section>
 
-<!-- CONTACT FORM -->
 <section class="contact-section" id="contact">
   <div class="contact-inner">
     <div class="contact-left">
@@ -505,7 +595,15 @@ footer { background: #0d1912; padding: 36px 80px; display: flex; justify-content
         <div class="contact-info-item">
           <div>
             <div class="contact-info-label">Email</div>
-            <div class="contact-info-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="81f0f4e8e2eaf2e9eef5eaeef3e4e0c1e6ece0e8edafe2eeec">[email&#160;protected]</a></div>
+            <div class="contact-info-value">quickshotkorea@gmail.com</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div>
+            <div class="contact-info-label">Instagram</div>
+            <div class="contact-info-value">
+              <a href="https://www.instagram.com/quickshotkorea" target="_blank" style="color:rgba(232,239,233,0.8);text-decoration:none;">@quickshotkorea</a>
+            </div>
           </div>
         </div>
         <div class="contact-info-item">
@@ -570,11 +668,17 @@ footer { background: #0d1912; padding: 36px 80px; display: flex; justify-content
 
 <footer>
   <div class="footer-logo">Quick<span>Shot</span></div>
-  <div class="footer-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0372766a6068706b6c77686c71666243646e626a6f2d606c6e">[email&#160;protected]</a></div>
+  <div class="footer-center">
+    <div class="footer-email">quickshotkorea@gmail.com</div>
+    <a href="https://www.instagram.com/quickshotkorea" target="_blank" class="footer-insta">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+      @quickshotkorea
+    </a>
+  </div>
   <div class="footer-copy">© 2026 QuickShot. All rights reserved.</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   emailjs.init('0BkH1uZcprW08dJvN');
 
   function sendEmail() {
@@ -602,4 +706,16 @@ footer { background: #0d1912; padding: 36px 80px; display: flex; justify-content
     emailjs.send('service_2c6yk8j', 'template_wvshxbg', params)
       .then(() => {
         document.getElementById('contactForm').style.display = 'none';
-        document.
+        document.getElementById('formSuccess').style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = '문의 보내기 →';
+      })
+      .catch(() => {
+        alert('전송 중 오류가 발생했습니다. 이메일로 직접 문의해 주세요.');
+        btn.disabled = false;
+        btn.textContent = '문의 보내기 →';
+      });
+  }
+</script>
+</body>
+</html>
